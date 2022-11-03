@@ -75,7 +75,7 @@ const LoadingScreen: React.FC = () => {
         }
       });
 
-      if (router.pathname === "/")
+      // if (router.pathname === "/")
         return;
   
       await animationControls.start({
