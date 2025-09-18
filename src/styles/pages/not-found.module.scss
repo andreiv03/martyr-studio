@@ -1,0 +1,15 @@
+.page {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-family: "Roboto Slab", serif;
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 0px;
+    text-transform: capitalize;
+  }
+}

@@ -1,0 +1,130 @@
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  transform: translateY(-100vh);
+  background: var(--foreground-primary);
+  transition: transform 200ms ease 500ms;
+
+  &.open {
+    transform: translateY(0);
+    transition-delay: 0ms;
+
+    .container {
+      .item {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+        transition: transform 750ms cubic-bezier(0.215, 0.61, 0.355, 1),
+          opacity 750ms cubic-bezier(0.215, 0.61, 0.355, 1);
+
+        &:nth-child(1) {
+          transition-delay: 300ms;
+        }
+
+        &:nth-child(2) {
+          transition-delay: 450ms;
+        }
+
+        &:nth-child(3) {
+          transition-delay: 600ms;
+        }
+
+        &:nth-child(4) {
+          transition-delay: 750ms;
+        }
+      }
+    }
+  }
+
+  .container {
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(250px, 100%);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.25rem;
+
+    .item {
+      position: relative;
+      transform: translateY(-25px);
+      opacity: 0;
+      visibility: 0;
+      transition: transform 400ms ease, opacity 400ms ease;
+
+      & > a,
+      .collapsible button {
+        color: var(--background-primary);
+        font-size: 1.25rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        -webkit-text-stroke: 0.25px var(--background-primary);
+      }
+
+      .collapsible {
+        button {
+          margin: 0 auto;
+          display: block;
+        }
+
+        .collapsible_container {
+          overflow: hidden;
+          transition: height 300ms ease;
+
+          .collapsible_content {
+            margin-top: 0.75rem;
+            padding-top: 1.75rem;
+            border-top: 0.33px solid var(--background-primary);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+
+            a,
+            span {
+              color: var(--background-primary);
+              font-size: 1rem;
+              font-weight: 300;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  h5,
+  h6 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  h5 {
+    bottom: 4rem;
+    color: var(--yellow);
+    font-size: 0.875rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    -webkit-text-stroke: 0.15px var(--yellow);
+    opacity: 0;
+    transition: opacity 200ms ease;
+
+    &.visible {
+      opacity: 1;
+    }
+  }
+
+  h6 {
+    bottom: 1.5rem;
+    color: var(--background-primary);
+    font-size: 0.625rem;
+    font-weight: 300;
+  }
+}

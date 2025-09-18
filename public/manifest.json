@@ -1,19 +1,20 @@
 {
-  "background_color": "#f6f7f6",
-  "description": "Martyr Studio — Premium markerting and branding services.Whether you need to clarify the future market position or to improve everyday experiences for your customers, we are here to serve.",
-  "display": "standalone",
-  "icons": [{
-    "sizes": "192x192",
-    "src": "/android-chrome-192x192.png",
-    "type":"image/png"
-  }, {
-    "sizes": "512x512",
-    "src": "/android-chrome-512x512.png",
-    "type": "image/png"
-  }],
+  "short_name": "martyr-studio",
   "name": "Martyr Studio — Premium marketing and branding services",
-  "scope": "/",
-  "short_name": "Martyr Studio",
-  "start_url": "/",
-  "theme_color": "#191919"
+  "icons": [
+    {
+      "sizes": "192x192",
+      "src": "/android-chrome-192x192.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "512x512",
+      "src": "/android-chrome-512x512.png",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#191919",
+  "background_color": "#f6f7f6"
 }
